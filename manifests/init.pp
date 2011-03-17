@@ -35,7 +35,7 @@ class mockbuild(
 ) {
 
   # Validate autoupgrade parameter.  This will determine package latest or not.
-  if ! $autoupgrade in [ true, false ] {
+  if ! ( "${autoupgrade}" in [ 'true', 'false' ] ) {
     fail('autoupgrade must be true or false')
   }
   # Set a local variable to be consistent.
@@ -73,7 +73,6 @@ class mockbuild(
     gid    => $gid_real,
     before => File[$home],
   }
-  ->
   user { 'mockbuild':
     ensure   => present,
     uid      => $uid_real,
@@ -110,6 +109,7 @@ class mockbuild(
   }
   file { "${home}/.ssh/authorized_keys":
     ensure => file,
+    mode   => '0600',
   }
   file { "${home}/.rpmmacros":
     ensure  => file,
