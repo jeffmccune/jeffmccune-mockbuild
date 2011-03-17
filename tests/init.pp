@@ -1,1 +1,7 @@
-include mockbuild
+node default {
+
+  class { 'mockbuild':
+    version => latest,
+  }
+
+}
