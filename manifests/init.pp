@@ -31,8 +31,7 @@ class mockbuild(
   $version     = 'UNSPECIFIED',
   $autoupgrade = true,
   $uid         = '131',
-  $gid         = '131',
-  $auth_keys   = [ '# NO KEYS SPECIFIED' ],
+  $gid         = '131'
 ) {
 
   # Validate autoupgrade parameter.  This will determine package latest or not.
