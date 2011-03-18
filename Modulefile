@@ -1,5 +1,5 @@
 name    'jeffmccune-mockbuild'
-version '0.0.1'
+version '1.0.0'
 source 'git://github.com/jeffmccune/jeffmccune-mockbuild.git'
 author 'jeffmccune'
 license 'Apache'
